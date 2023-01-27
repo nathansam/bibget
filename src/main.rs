@@ -9,8 +9,8 @@ use std::io::Write;
     about = "Simple tool to convert a DOI to a BibTeX entry and append it to a file."
 )]
 struct Cli {
-    /// The path to the file to written to
-    #[clap(short = 'f', long = "file", required = false, default_value = "")]
+    /// The path to the file to written to. If not specified, the entry will only be printed to stdout.
+    #[clap(short = 'f', long = "file", required = false, default_value = "none")]
     file: String,
     /// The DOI to look up
     #[clap()]
@@ -28,7 +28,7 @@ async fn main() {
     println!("{}", bibtex);
 
     let file = args.file;
-    if file != "" {
+    if file != "none" {
         let mut f = OpenOptions::new()
             .append(true)
             .create(true) // Optionally create the file if it doesn't already exist
