@@ -7,7 +7,7 @@ CLI tool to generate a BibTex entry from a DOI. Written in Rust and based on the
 `getbib` can be installed from source using `cargo`
 
 ``` bash
-cargo install --git https://github.com/nathansam.getbib.git getbib
+cargo install --git https://github.com/nathansam/getbib.git getbib
 ```
 
 ## Usage
