@@ -7,7 +7,7 @@ CLI tool to generate a BibTex entry from a DOI. Written in Rust and based on the
 `bibget` can be installed from source using `cargo`
 
 ``` bash
-cargo install --git https://github.com/nathansam.bibget.git bibget
+cargo install --git https://github.com/nathansam/bibget.git bibget 
 ```
 
 ## Usage
