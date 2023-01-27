@@ -1,21 +1,21 @@
-# getbib
+# bibget
 
 CLI tool to generate a BibTex entry from a DOI. Written in Rust and based on the [`doi2bib` crate](https://crates.io/crates/doi2bib). 
 
 ## Installation
 
-`getbib` can be installed from source using `cargo`
+`bibget` can be installed from source using `cargo`
 
 ``` bash
-cargo install --git https://github.com/nathansam.getbib.git getbib
+cargo install --git https://github.com/nathansam.bibget.git bibget
 ```
 
 ## Usage
 
-`getbib` supports an optional `-f/--file` argument for writing the BibTex entry to a file. The file will automatically be created if it does not already exist. If the file exists then the entry will be appended to the file. 
+`bibget` supports an optional `-f/--file` argument for writing the BibTex entry to a file. The file will automatically be created if it does not already exist. If the file exists then the entry will be appended to the file. 
 
 ``` bash
-> getbib -f test.bib 10.1177/17562848211064004
+> bibget -f test.bib 10.1177/17562848211064004
 ```
 
 ```

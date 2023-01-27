@@ -24,6 +24,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a4a4ddaa51a5bc52a6948f74c06d20aaaddb71924eab79b8c97a8c556e942d6a"
 
 [[package]]
+name = "bibget"
+version = "0.1.0"
+dependencies = [
+ "clap",
+ "doi2bib",
+ "futures",
+ "tokio",
+]
+
+[[package]]
 name = "bitflags"
 version = "1.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -273,16 +283,6 @@ dependencies = [
  "pin-project-lite",
  "pin-utils",
  "slab",
-]
-
-[[package]]
-name = "getbib"
-version = "0.1.0"
-dependencies = [
- "clap",
- "doi2bib",
- "futures",
- "tokio",
 ]
 
 [[package]]
