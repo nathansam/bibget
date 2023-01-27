@@ -6,10 +6,10 @@ use std::io::Write;
 #[clap(
     author = "Nathan Constantine-Cooke",
     version,
-    about = "Simple tool to convert a DOI to a BibTeX entry and append it to a file."
+    about = "Simple tool to convert a DOI to a BibTeX entry and (optionally) append it to a file."
 )]
 struct Cli {
-    /// The path to the file to written to. If not specified, the entry will only be printed to stdout.
+    /// The path to the file to written to. If not specified, the BibTex entry will only be printed to stdout.
     #[clap(short = 'f', long = "file", required = false, default_value = "none")]
     file: String,
     /// The DOI to look up

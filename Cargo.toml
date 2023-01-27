@@ -1,11 +1,15 @@
 [package]
 name = "bibget"
-version = "0.1.0"
+version = "0.0.1"
 edition = "2021"
 authors = ["Nathan Constantine-Cooke <nathan.constantine-cooke@ed.ac.uk>"]
 license = "MIT OR Apache-2.0"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+keywords = ["BibTeX"]
+categories = ["command-line-utilities"]
+description = "CLI tool to generate a BibTex entry from a DOI"
+readme = "README.md"
+homepage = "https://github.com/nathansam/bibget"
+repository = "https://github.com/nathansam/bibget"
 
 [dependencies]
 tokio = { version = "1.24.2", features = ["full"] }
