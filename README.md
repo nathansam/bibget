@@ -1,6 +1,6 @@
 # bibget
 
-[![CI](https://github.com/nathansam/bibget/actions/workflows/ci.yml/badge.svg)](https://github.com/nathansam/bibget/actions/workflows/ci.yml) [![crates.io](https://img.shields.io/crates/v/bibget.svg)](https://crates.io/crates/bibget) [![Documentation](https://docs.rs/bibget/badge.svg)](https://docs.rs/bibget) [![dependency status](https://deps.rs/repo/github/nathansam/bibget/status.svg)](https://deps.rs/repo/github/nathansam/bibget) [![MIT](https://img.shields.io/crates/l/bibget.svg)](https://github.com/nathansam/bibget/blob/master/LICENSE)
+[![CI](https://github.com/nathansam/bibget/actions/workflows/rust.yml/badge.svg)](https://github.com/nathansam/bibget/actions/workflows/rust.yml) [![crates.io](https://img.shields.io/crates/v/bibget.svg)](https://crates.io/crates/bibget) [![dependency status](https://deps.rs/repo/github/nathansam/bibget/status.svg)](https://deps.rs/repo/github/nathansam/bibget) [![MIT](https://img.shields.io/crates/l/bibget.svg)](https://github.com/nathansam/bibget/blob/master/LICENSE)
 
 CLI tool to generate a BibTex entry from a DOI. Written in Rust and based on the [`doi2bib` crate](https://crates.io/crates/doi2bib). 
 
@@ -8,7 +8,14 @@ CLI tool to generate a BibTex entry from a DOI. Written in Rust and based on the
 
 `bibget` can be installed from source using `cargo`
 
+
+
+
 ``` bash
+# release version from crates.io
+cargo install bibget 
+
+# development version from GitHub
 cargo install --git https://github.com/nathansam/bibget.git bibget 
 ```
 
