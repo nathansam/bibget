@@ -13,6 +13,6 @@ repository = "https://github.com/nathansam/bibget"
 
 [dependencies]
 tokio = { version = "1.25.0", features = ["full"] }
-futures = "0.3.25"
+futures = "0.3.26"
 doi2bib = "0.1.5"
 clap = {version = "4.1.4", features = ["derive"] }
