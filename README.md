@@ -24,20 +24,20 @@ cargo install --git https://github.com/nathansam/bibget.git bibget
 `bibget` supports an optional `-f/--file` argument for writing the BibTex entry to a file. The file will automatically be created if it does not already exist. If the file exists then the entry will be appended to the file. 
 
 ``` bash
-> bibget -f test.bib 10.1177/17562848211064004
+> bibget -f test.bib 10.1002/sim.1186
 ```
 
 ```
-@article{Lucaciu_2021,
-	doi = {10.1177/17562848211064004},
-	url = {https://doi.org/10.1177%2F17562848211064004},
-	year = 2021,
-	month = {jan},
-	publisher = {{SAGE} Publications},
-	volume = {14},
-	pages = {175628482110640},
-	author = {Laura A. Lucaciu and Nathan Constantine-Cooke and Nikolas Plevris and Spyros Siakavellas and Lauranne A.A.P. Derikx and Gareth-Rhys Jones and Charles W. Lees},
-	title = {Real-world experience with tofacitinib in ulcerative colitis: a systematic review and meta-analysis},
-	journal = {Therapeutic Advances in Gastroenterology}
+@article{Higgins_2002,
+	doi = {10.1002/sim.1186},
+	url = {https://doi.org/10.1002%2Fsim.1186},
+	year = 2002,
+	publisher = {Wiley},
+	volume = {21},
+	number = {11},
+	pages = {1539--1558},
+	author = {Julian P. T. Higgins and Simon G. Thompson},
+	title = {Quantifying heterogeneity in a meta-analysis},
+	journal = {Statistics in Medicine}
 }
 ```
