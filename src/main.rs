@@ -23,9 +23,9 @@ async fn main() {
     let doi = args.doi;
     let doi2bib = doi2bib::Doi2Bib::new().unwrap();
     let mut bibtex = doi2bib.resolve_doi(&doi).await.unwrap();
-    bibtex.push_str("\n");
+    bibtex.push('\n');
 
-    println!("{}", bibtex);
+    println!("{bibtex}");
 
     let file = args.file;
     if file != "none" {
