@@ -1,5 +1,15 @@
 # Changelog
 
+## bibget 0.0.3
+
+### Added 
+
+* Test suite has been set up for the CLI. 
+
+### Changed 
+
+* Size has been reduced by removing unused flags from dependencies and stripping symbols from the binary.
+
 ## bibget 0.0.2
 
 ### Added 
