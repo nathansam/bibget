@@ -77,7 +77,7 @@ jobs:
           command: test
           args: --benches ${{ matrix.features }}
   Coverage:
-    name: upload-cov
+    name: Upload Test Coverage
     needs: [style, test]
     runs-on: ubuntu-latest
     steps:
