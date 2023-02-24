@@ -28,7 +28,7 @@ async fn main() {
         Ok(file) => file,
         Err(e) => {
             if e.is_status() {
-                println!("❌ Getting the BibTex entry failed. This is likely either because the DOI is invalid or you do not have internet access.");
+                println!("❌ Getting the BibTex entry failed. Please check the DOI is valid and you have internet access.");
                 std::process::exit(1);
             } else {
                 panic!("Error: {}", e)
