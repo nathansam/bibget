@@ -1,5 +1,25 @@
 # Changelog
 
+## bibget 1.0.0
+
+The bump to version 1.0.0 indicates that the binary is now considered
+stable. However, additional features (such as resolving other identifiers) may
+be added in the future. 
+
+#### Changed
+
+Shorted error message given if http request fails. 
+
+### Dependencies updated to latest versions
+
+* clap 4.1.4 -> 4.1.6
+
+## bibget 0.0.4
+
+### Added
+
+Error handling for when the DOI is not found.
+
 ## bibget 0.0.3
 
 ### Added 
