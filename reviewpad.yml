@@ -87,17 +87,6 @@ workflows:
           - $removeLabels(["small", "medium"])
           - $addLabel("large")
 
-  # This workflow assigns a random reviewer to pull requests.
-  # This helps guarantee that most pull requests are reviewed by at least one person.
-  - name: reviewer-assignment
-    description: Assign a reviewer to pull requests
-    always-run: true
-    if:
-      # Automatically assign a random reviewer when the pull request is ready for review;
-      - rule: $isDraft() == false
-        extra-actions:
-          - $assignRandomReviewer()
-
   # This workflow signals pull requests waiting for reviews.
   # This helps guarantee that pull requests are reviewed and approved by at least one person.
   - name: check-approvals
@@ -138,4 +127,3 @@ workflows:
       - rule: $hasFilePattern("**/LICENSE*")
         extra-actions:
           - $fail("License files cannot be modified")
-
