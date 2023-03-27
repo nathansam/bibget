@@ -19,7 +19,7 @@ clap = {version = "4.1.8", features = ["derive", "std"], default-features = fals
 
 [dev-dependencies]
 assert_cmd = "2.0.8"
-predicates = "2.1.5"
+predicates = "3.0.2"
 assert_fs = "1.0.10"
 
 [profile.release]
