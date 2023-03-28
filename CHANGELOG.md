@@ -1,5 +1,15 @@
 # Changelog
 
+## bibget 1.0.1
+
+Dependencies have been updated.
+
+### Dependencies updated to latest versions
+
+* tokio 1.25.0 -> 1.26.0
+* futures 0.3.26 -> 0.3.27
+* clap 4.1.6 -> 4.1.13
+
 ## bibget 1.0.0
 
 The bump to version 1.0.0 indicates that the binary is now considered
