@@ -13,14 +13,14 @@ repository = "https://github.com/nathansam/bibget"
 
 [dependencies]
 tokio = { version = "1.26.0", features = ["full"], default-features = false }
-futures = { default-features = false, version = "0.3.26" }
+futures = { default-features = false, version = "0.3.27" }
 doi2bib = "0.1.5"
 clap = {version = "4.1.13", features = ["derive", "std"], default-features = false }
 
 [dev-dependencies]
-assert_cmd = "2.0.8"
-predicates = "2.1.5"
-assert_fs = "1.0.10"
+assert_cmd = "2.0.10"
+predicates = "3.0.2"
+assert_fs = "1.0.12"
 
 [profile.release]
 strip = true
