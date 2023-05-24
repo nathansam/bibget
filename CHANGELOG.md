@@ -1,5 +1,14 @@
 # Changelog
 
+## bibget 1.0.2
+
+Dependencies have been updated.
+
+### Dependencies updated to latest versions
+
+* futures 0.3.27 -> 0.3.28
+* clap 4.1.13 -> 4.3.0
+
 ## bibget 1.0.1
 
 Dependencies have been updated.
