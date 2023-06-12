@@ -193,9 +193,9 @@ checksum = "fea41bba32d969b513997752735605054bc0dfa92b4c56bf1189f2e174be7a10"
 
 [[package]]
 name = "doi2bib"
-version = "0.1.5"
+version = "0.1.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e166968937e71a8315aa5ffa040b3da07bd1b2d8025863c4055f8922cd34bcc6"
+checksum = "eaa1bf552c0fe554ed4140d35ceb5f3ef96f4d06d981296dbd84266bb0d3ba4c"
 dependencies = [
  "once_cell",
  "regex",
@@ -681,9 +681,9 @@ dependencies = [
 
 [[package]]
 name = "once_cell"
-version = "1.17.1"
+version = "1.18.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b7e5500299e16ebb147ae15a00a942af264cf3688f47923b8fc2cd5858f23ad3"
+checksum = "dd8b5dd2ae5ed71462c540258bedcb51965123ad7e7ccf4b9a8cafaa4a63576d"
 
 [[package]]
 name = "openssl"
