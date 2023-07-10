@@ -15,7 +15,7 @@ repository = "https://github.com/nathansam/bibget"
 tokio = { version = "1.26.0", features = ["full"], default-features = false }
 futures = { default-features = false, version = "0.3.28" }
 doi2bib = "0.1.5"
-clap = {version = "4.3.0", features = ["derive", "std"], default-features = false }
+clap = {version = "4.3.11", features = ["derive", "std"], default-features = false }
 
 [dev-dependencies]
 assert_cmd = "2.0.11"
