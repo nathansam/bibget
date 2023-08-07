@@ -1,5 +1,15 @@
 # Changelog
 
+## bibget 1.0.3
+
+Dependencies have been updated.
+
+### Dependencies updated to latest versions
+
+* doi2bib 0.1.5 -> 0.1.6
+* futures 1.26.0 -> 1.29.1
+* clap 4.3.0 -> 4.3.19
+
 ## bibget 1.0.2
 
 Dependencies have been updated.
