@@ -1,6 +1,6 @@
 [package]
 name = "bibget"
-version = "1.0.3"
+version = "1.0.4"
 edition = "2021"
 authors = ["Nathan Constantine-Cooke <nathan.constantine-cooke@ed.ac.uk>"]
 license = "MIT OR Apache-2.0"
@@ -16,6 +16,7 @@ tokio = { version = "1.29.1", features = ["full"], default-features = false }
 futures = { default-features = false, version = "0.3.28" }
 doi2bib = "0.1.6"
 clap = {version = "4.3.19", features = ["derive", "std"], default-features = false }
+regex = "1.10.2"
 
 [dev-dependencies]
 assert_cmd = "2.0.12"
