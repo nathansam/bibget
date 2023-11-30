@@ -7,6 +7,8 @@ on:
       - master
     tags:
       - 'v*.*.*'
+  schedule:
+    - cron: '0 6 1,14,28 * *'
 
 jobs:
   style:
@@ -26,22 +28,16 @@ jobs:
 
     strategy:
       matrix:
-        build: [stable, beta, nightly]
-        include:
-          - build: beta
-            rust: beta
-          - build: nightly
-            rust: nightly
-            benches: true
+        build: [stable, nightly]
 
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
       - name: Build debug
-        uses: dtolnay/rust-toolchain@stable
+        uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: ${{ matrix.build }}
       - run: cargo build
-
       - run: cargo test --all --verbose
       
   Coverage:
