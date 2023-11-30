@@ -1,4 +1,23 @@
 # Changelog
+## bibget 1.0.4
+
+Better format BibTex entries. 
+
+#### Changed
+
+There appears to have been changes to the doi.org API which resulted in 
+`bibget` returning one-line BibTex entries. This has been fixed by using regex
+to add a newline character to the end of commas outside of curly brackets. 
+
+### Dependencies added
+
+* regex 1.10.2
+
+### Dependencies updated to latest versions
+
+* tokio 1.29.1 -> 1.33.0
+* futures  0.3.28 -> 0.3.29
+* clap 4.3.19 -> 4.4.7
 
 ## bibget 1.0.3
 

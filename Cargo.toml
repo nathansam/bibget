@@ -12,15 +12,15 @@ homepage = "https://github.com/nathansam/bibget"
 repository = "https://github.com/nathansam/bibget"
 
 [dependencies]
-tokio = { version = "1.29.1", features = ["full"], default-features = false }
-futures = { default-features = false, version = "0.3.28" }
+tokio = { version = "1.33.0", features = ["full"], default-features = false }
+futures = { default-features = false, version = "0.3.29" }
 doi2bib = "0.1.6"
-clap = {version = "4.3.19", features = ["derive", "std"], default-features = false }
+clap = {version = "4.4.7", features = ["derive", "std"], default-features = false }
 regex = "1.10.2"
 
 [dev-dependencies]
 assert_cmd = "2.0.12"
-predicates = "3.0.3"
+predicates = "3.0.4"
 assert_fs = "1.0.13"
 
 [profile.release]
