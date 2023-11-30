@@ -1,7 +1,7 @@
 use clap::Parser;
+use regex::Regex;
 use std::fs::OpenOptions;
 use std::io::Write;
-use regex::Regex;
 
 #[derive(Parser)]
 #[clap(
@@ -40,7 +40,7 @@ async fn main() {
     let re = Regex::new(r"\(.*?\)|(,)").unwrap();
     bibtex = re.replace_all(&bibtex, ",\n  ").to_string(); // Format entries on different lines
 
-    //bibtex = bibtex.replace("}, ", "},\n  "); // Format keys on different lines 
+    //bibtex = bibtex.replace("}, ", "},\n  "); // Format keys on different lines
     bibtex = bibtex.replace("=", " = "); // Add space to = for readability
     bibtex = bibtex.replace("} }", "}\n}");
     bibtex.push('\n');
