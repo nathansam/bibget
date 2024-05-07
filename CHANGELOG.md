@@ -1,9 +1,10 @@
 # Changelog
+
 ## bibget 1.0.4
 
 Better format BibTex entries. 
 
-#### Changed
+### Changed
 
 There appears to have been changes to the doi.org API which resulted in 
 `bibget` returning one-line BibTex entries. This has been fixed by using regex
