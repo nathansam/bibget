@@ -43,9 +43,9 @@ async fn main() {
 
     for char in bibtex.chars() {
         if char == '{' {
-            curly_count = curly_count + 1;
+            curly_count += 1;
         } else if char == '}' {
-            curly_count = curly_count - 1;
+            curly_count -= 1;
         }
         if char == ',' && curly_count == 1 {
             format_bibtex.push_str(",\n  ");
