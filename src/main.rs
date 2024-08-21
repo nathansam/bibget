@@ -1,5 +1,4 @@
 use clap::Parser;
-use regex::Regex;
 use std::fs::OpenOptions;
 use std::io::Write;
 
@@ -25,7 +24,7 @@ async fn main() {
     let doi2bib = doi2bib::Doi2Bib::new().unwrap();
     let bibtex_result = doi2bib.resolve_doi(&doi).await;
 
-    let mut bibtex = match bibtex_result {
+    let bibtex = match bibtex_result {
         Ok(file) => file,
         Err(e) => {
             if e.is_status() {
@@ -36,16 +35,31 @@ async fn main() {
             }
         }
     };
+     // Count the number of layers curly braces to ensure we only add newlines
+     // after the first level of curly braces (i.e between new BibTex keys)
+    let mut curly_count = 0;
+    // Format BibTex output to be more readable (new lines and spaces)
+    let mut format_bibtex = String::from("");
 
-    let re = Regex::new(r"\(.*?\)|(,)").unwrap();
-    bibtex = re.replace_all(&bibtex, ",\n  ").to_string(); // Format entries on different lines
+    for char in bibtex.chars() {
+        if char == '{' {
+            curly_count = curly_count + 1;
+        } else if char == '}' {
+            curly_count = curly_count - 1;
+        }
+        if char == ',' && curly_count == 1 {
+            format_bibtex.push_str(",\n  ");
+        } else {
+            format_bibtex.push(char);
+        }
+    }
 
-    //bibtex = bibtex.replace("}, ", "},\n  "); // Format keys on different lines
-    bibtex = bibtex.replace("=", " = "); // Add space to = for readability
-    bibtex = bibtex.replace("} }", "}\n}");
-    bibtex.push('\n');
-    println!("{bibtex}");
+    format_bibtex = format_bibtex.replace("} }", "}\n}"); // Format final line
+    format_bibtex = format_bibtex.replace("=", " = "); // Add spaces around equals sign
 
+    println!("{format_bibtex}");
+
+    // Write to file (if specified)
     let file = args.file;
     if file != "none" {
         let mut f = OpenOptions::new()
@@ -53,7 +67,7 @@ async fn main() {
             .create(true) // Optionally create the file if it doesn't already exist
             .open(file)
             .expect("Unable to open file");
-        f.write_all(bibtex.as_bytes())
+        f.write_all(format_bibtex.as_bytes())
             .expect("Unable to write data");
     }
 }

@@ -1,5 +1,23 @@
 # Changelog
 
+## bibget 1.0.5
+
+### Changed
+
+The authors key is now parsed correctly (commas in a bibtex key shouldn't start
+a new line)
+
+### Dependencies removed 
+
+* regex 
+
+### Dependencies updated to latest versions
+
+* tokio 1.33.0 -> 1.39.3
+* futures  0.3.29 -> 0.3.30
+* doi2bib 0.1.6 -> 0.2.0
+* clap 4.4.7 -> 4.5.13 
+
 ## bibget 1.0.4
 
 Better format BibTex entries. 

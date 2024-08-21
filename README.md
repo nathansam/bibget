@@ -28,16 +28,18 @@ cargo install --git https://github.com/nathansam/bibget.git bibget
 ```
 
 ```
-@article{Higgins_2002,
-	doi = {10.1002/sim.1186},
-	url = {https://doi.org/10.1002%2Fsim.1186},
-	year = 2002,
-	publisher = {Wiley},
-	volume = {21},
-	number = {11},
-	pages = {1539--1558},
-	author = {Julian P. T. Higgins and Simon G. Thompson},
-	title = {Quantifying heterogeneity in a meta-analysis},
-	journal = {Statistics in Medicine}
+ @article{Higgins_2002,
+   title = {Quantifying heterogeneity in a meta‐analysis},
+   volume = {21},
+   ISSN = {1097-0258},
+   url = {http://dx.doi.org/10.1002/sim.1186},
+   DOI = {10.1002/sim.1186},
+   number = {11},
+   journal = {Statistics in Medicine},
+   publisher = {Wiley},
+   author = {Higgins, Julian P. T. and Thompson, Simon G.},
+   year = {2002},
+   month = may,
+   pages = {1539–1558}
 }
 ```
