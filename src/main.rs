@@ -35,8 +35,8 @@ async fn main() {
             }
         }
     };
-     // Count the number of layers curly braces to ensure we only add newlines
-     // after the first level of curly braces (i.e between new BibTex keys)
+    // Count the number of layers curly braces to ensure we only add newlines
+    // after the first level of curly braces (i.e between new BibTex keys)
     let mut curly_count = 0;
     // Format BibTex output to be more readable (new lines and spaces)
     let mut format_bibtex = String::from("");
