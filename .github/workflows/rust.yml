@@ -41,25 +41,21 @@ jobs:
       - run: cargo test --all --verbose
       
   Coverage:
-    name: Upload Test Coverage
-    needs: [style, test]
+    name: coverage
     runs-on: ubuntu-latest
+    container:
+      image: xd009642/tarpaulin:develop-nightly
+      options: --security-opt seccomp=unconfined
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install stable toolchain
-        uses: dtolnay/rust-toolchain@stable
-      - run: cargo install cargo-tarpaulin
-      - run: cargo tarpaulin 
-      
-      - name: Upload to codecov.io
-        uses: codecov/codecov-action@v4.5.0
-        with:
-          token: ${{secrets.CODECOV_TOKEN}}
+      - name: Generate code coverage
+        run: |
+          cargo +nightly tarpaulin --verbose --all-features --workspace --timeout 120 --out xml
 
-      - name: Archive code coverage results
-        uses: actions/upload-artifact@v4
+      - name: Upload to codecov.io
+        uses: codecov/codecov-action@v2
         with:
-          name: code-coverage-report
-          path: cobertura.xml
+          # token: ${{secrets.CODECOV_TOKEN}} # not required for public repos
+          fail_ci_if_error: true
