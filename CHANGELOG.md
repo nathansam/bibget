@@ -1,11 +1,25 @@
 # Changelog
 
+## bibget 1.1.0
+
+### Features
+
+Multiple DOIs can now be provided by separating them with a space.
+
+### Bug fixes
+
+-h (--help) and -V (--version) flags should now work again.
+
+### Documentation
+
+Readme updated to describe the new multiple DOI feature. 
+
 ## bibget 1.0.5
 
 ### Changed
 
-The authors key is now parsed correctly (commas in a bibtex key shouldn't start
-a new line)
+The authors key is now formmated correctly (commas in a bibtex key shouldn't
+start a new line now)
 
 ### Dependencies removed 
 
