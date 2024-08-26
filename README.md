@@ -1,4 +1,4 @@
-# bibget
+# <img src="https://raw.githubusercontent.com/nathansam/bibget/master/bibget.png" alt = "bibget logo" width = 200>
 
 [![CI](https://github.com/nathansam/bibget/actions/workflows/rust.yml/badge.svg)](https://github.com/nathansam/bibget/actions/workflows/rust.yml) [![crates.io](https://img.shields.io/crates/v/bibget.svg)](https://crates.io/crates/bibget) [![dependency status](https://deps.rs/repo/github/nathansam/bibget/status.svg)](https://deps.rs/repo/github/nathansam/bibget) [![MIT](https://img.shields.io/crates/l/bibget.svg)](https://github.com/nathansam/bibget/blob/master/LICENSE) 
 
