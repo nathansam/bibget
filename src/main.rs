@@ -88,7 +88,7 @@ fn bib_format(bibtex: String) -> String {
     format_bibtex = format_bibtex.replace(" }", "}");
     format_bibtex = format_bibtex.replace("=", " = "); // Add spaces around equals sign
 
-    return format_bibtex;
+    format_bibtex
 }
 
 #[test]
