@@ -11,3 +11,13 @@ fn find_content_in_file() -> Result<(), Box<dyn std::error::Error>> {
     ));
     Ok(())
 }
+
+#[test]
+fn expect_error() -> Result<(), Box<dyn std::error::Error>> {
+    let mut cmd = Command::cargo_bin("bibget")?;
+    cmd.arg("apple");
+    cmd.assert().failure().stdout(predicate::str::contains(
+        "❌ Getting the BibTex entry failed.",
+    ));
+    Ok(())
+}
