@@ -95,9 +95,16 @@ fn bib_format(bibtex: String) -> String {
 fn test_bracket() {
     let mut example = String::from("title={Article name},");
     assert_eq!(bib_format(example), "title = {Article name},");
+
     example = String::from("author = {{Jane Doe} and {John Smith}\n},");
     assert_eq!(
         bib_format(example),
         "author  =  {{Jane Doe} and {John Smith}\n},"
+    );
+
+    example = String::from("author = {{Jane Doe},{John Smith}\n},");
+    assert_eq!(
+        bib_format(example),
+        "author  =  {{Jane Doe},\n  {John Smith}\n},"
     );
 }
