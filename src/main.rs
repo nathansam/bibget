@@ -43,7 +43,6 @@ async fn main() {
         };
         // Count the number of layers curly braces to ensure we only add newlines
         // after the first level of curly braces (i.e between new BibTex keys)
-  
 
         // Format BibTex output to be more readable (new lines and spaces)
         let format_bibtex = bib_format(bibtex);
@@ -70,34 +69,35 @@ async fn main() {
     }
 }
 
-
-fn bib_format(bibtex:String) -> String {
+fn bib_format(bibtex: String) -> String {
     let mut curly_count = 0;
     let mut format_bibtex = String::from("");
-        for char in bibtex.chars() {
-            if char == '{' {
-                curly_count += 1;
-            } else if char == '}' {
-                curly_count -= 1;
-            }
-            if char == ',' && curly_count == 1 {
-                format_bibtex.push_str(",\n  ");
-            } else {
-                format_bibtex.push(char);
-            }
+    for char in bibtex.chars() {
+        if char == '{' {
+            curly_count += 1;
+        } else if char == '}' {
+            curly_count -= 1;
         }
-        format_bibtex = format_bibtex.replace("} }", "}\n}"); // Format final line
-        format_bibtex = format_bibtex.replace(" }", "}");
-        format_bibtex = format_bibtex.replace("=", " = "); // Add spaces around equals sign
-
-        return format_bibtex
+        if char == ',' && curly_count == 1 {
+            format_bibtex.push_str(",\n  ");
+        } else {
+            format_bibtex.push(char);
+        }
     }
+    format_bibtex = format_bibtex.replace("} }", "}\n}"); // Format final line
+    format_bibtex = format_bibtex.replace(" }", "}");
+    format_bibtex = format_bibtex.replace("=", " = "); // Add spaces around equals sign
 
+    return format_bibtex;
+}
 
 #[test]
 fn test_bracket() {
     let mut example = String::from("title={Article name},");
     assert_eq!(bib_format(example), "title = {Article name},");
     example = String::from("author = {{Jane Doe} and {John Smith}\n},");
-    assert_eq!(bib_format(example), "author  =  {{Jane Doe} and {John Smith}\n},");
+    assert_eq!(
+        bib_format(example),
+        "author  =  {{Jane Doe} and {John Smith}\n},"
+    );
 }
