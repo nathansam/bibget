@@ -1,5 +1,21 @@
 # Changelog
 
+## bibget 1.1.1
+
+### Documentation
+
+Added additional crate keywords: 
+* Education
+* Academic
+* Bibliography
+* Citations
+
+### Dependencies updated to latest versions
+
+* tokio 1.39.3 -> 1.45.1
+* doi2bib 0.2.0 -> 0.2.1
+* clap 4.5.13 ->  4.5.40
+
 ## bibget 1.1.0
 
 ### Features
@@ -18,7 +34,7 @@ Readme updated to describe the new multiple DOI feature.
 
 ### Changed
 
-The authors key is now formmated correctly (commas in a bibtex key shouldn't
+The authors key is now formatted correctly (commas in a bibtex key shouldn't
 start a new line now)
 
 ### Dependencies removed 
