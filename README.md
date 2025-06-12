@@ -66,7 +66,6 @@ bibget 10.1002/sim.1186 10.1007/978-3-319-19425-7
    author = {Harrell , Frank E.},
    year = {2015}
 }
-
 ```
 
 `bibget` supports an optional `-f/--file` flag for writing the BibTex to
@@ -75,4 +74,12 @@ Entries will be appended to the end of existing files instead.
 
 ``` bash
 > bibget -f test.bib 10.1002/sim.1186
+```
+
+`bibget` can also be called via a lightweight docker image. Both Docker Hub and 
+the GitHub container registry are supported:
+
+``` bash
+docker run nathansam12/bibget <doi> # Docker Hub
+docker run ghcr.io/nathansam/bibget <doi> # GitHub Container Registry
 ```
