@@ -309,11 +309,10 @@ checksum = "fea41bba32d969b513997752735605054bc0dfa92b4c56bf1189f2e174be7a10"
 
 [[package]]
 name = "doi2bib"
-version = "0.2.1"
+version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d50cb33e338a890c54fcd7c49d7452f6b60e1e29411ffd5726d2c8274a7b21ea"
+checksum = "d06dc6ba7dc820bddf9eb622dcffaedc4ee731b1ea3ed391d6e391e2098c8af0"
 dependencies = [
- "once_cell",
  "regex",
  "reqwest",
 ]
