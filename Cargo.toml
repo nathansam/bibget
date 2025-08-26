@@ -12,10 +12,10 @@ homepage = "https://github.com/nathansam/bibget"
 repository = "https://github.com/nathansam/bibget"
 
 [dependencies]
-tokio = { version = "1.45.1", features = ["full"], default-features = false }
+tokio = { version = "1.47.1", features = ["full"], default-features = false }
 futures = { default-features = false, version = "0.3.31" }
-doi2bib = "0.2.1"
-clap = { version = "4.5.40", features = ["derive"] }
+doi2bib = "0.2.2"
+clap = { version = "4.5.46", features = ["derive"] }
 
 
 [dev-dependencies]
