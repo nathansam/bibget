@@ -4,7 +4,7 @@ use std::process::Command; // Run programs
 
 #[test]
 fn find_content_in_file() -> Result<(), Box<dyn std::error::Error>> {
-    let mut cmd = Command::cargo_bin("bibget")?;
+    let mut cmd = Command::new(assert_cmd::cargo::cargo_bin!("bibget"));
     cmd.arg("10.1002/sim.1186");
     cmd.assert().success().stdout(predicate::str::contains(
         "title = {Quantifying heterogeneity in a meta‐analysis},",
@@ -14,7 +14,7 @@ fn find_content_in_file() -> Result<(), Box<dyn std::error::Error>> {
 
 #[test]
 fn expect_error() -> Result<(), Box<dyn std::error::Error>> {
-    let mut cmd = Command::cargo_bin("bibget")?;
+    let mut cmd = Command::new(assert_cmd::cargo::cargo_bin!("bibget"));
     cmd.arg("apple");
     cmd.assert().failure().stdout(predicate::str::contains(
         "❌ Getting the BibTex entry failed.",
