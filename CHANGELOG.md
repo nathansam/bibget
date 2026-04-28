@@ -1,5 +1,14 @@
 # Changelog
 
+## bibget 1.1.2
+
+## Dependencies updated to latest versions
+
+* tokio 1.45.1 -> 1.49.0
+* doi2bib 0.2.1 -> 0.3.0
+* clap 4.5.40 -> 4.5.54
+
+
 ## bibget 1.1.1
 
 ### Documentation
